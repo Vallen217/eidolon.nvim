@@ -65,6 +65,7 @@ function util.load_theme()
 	local nvim_tree = eidolon.load_nvim_tree()
 	local aerial = eidolon.load_aerial()
 	local neogit = eidolon.load_neogit()
+	local render_md = eidolon.load_render_md()
 
 	util.load_hl_group(editor)
 	util.load_hl_group(syntax)
@@ -82,6 +83,7 @@ function util.load_theme()
 	util.load_hl_group(nvim_tree)
 	util.load_hl_group(aerial)
 	util.load_hl_group(neogit)
+	util.load_hl_group(render_md)
 end
 
 return util

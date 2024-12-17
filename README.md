@@ -41,6 +41,7 @@
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)

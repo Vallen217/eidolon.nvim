@@ -234,12 +234,12 @@ theme.load_treesitter = function()
 		["@markup.strikethrough"] = { fg = colors.fg, strikethrough = true }, -- Struck-through text
 		["@markup.underline"] = { fg = colors.fg, underline = true }, -- Underlined text
 		["@markup.heading"] = { fg = colors.blue1 }, -- Heading & titles
-		["@markup.heading.1"] = { fg = "#87bff7" }, -- Top-level heading
-		["@markup.heading.2"] = { fg = "#8bc2f8" }, -- Section heading
-		["@markup.heading.3"] = { fg = "#95c7f9" }, -- Subsection heading
-		["@markup.heading.4"] = { fg = "#99c9fa" }, -- And so on
-		["@markup.heading.5"] = { fg = "#a2cffb" }, -- And so forth
-		["@markup.heading.6"] = { fg = "#acd4fc" }, -- Six levels is enough
+		["@markup.heading.1"] = { fg = "#95C7F9" }, -- Top-level heading
+		["@markup.heading.2"] = { fg = "#9ACAFA" }, -- Section heading
+		["@markup.heading.3"] = { fg = "#9FCCFA" }, -- Subsection heading
+		["@markup.heading.4"] = { fg = "#A4CFFA" }, -- And so on
+		["@markup.heading.5"] = { fg = "#A8D1FA" }, -- And so forth
+		["@markup.heading.6"] = { fg = "#ACD3FA" }, -- Six levels is enough
 		["@markup.quote"] = { fg = colors.fg }, -- Block quotes
 		["@markup.math"] = { fg = colors.blue2 }, -- Math environments
 		["@markup.link"] = { fg = colors.purple2 }, -- Text references footnotes, citations
@@ -595,6 +595,48 @@ theme.load_neogit = function()
 		NeogitDiffDeletions = { fg = colors.red1 },
 		NeogitDiffDeleteHighlight = { fg = colors.red2 },
 		NeogitChangeDeleted = { fg = colors.red1 },
+	}
+end
+
+theme.load_render_md = function()
+	return {
+		RenderMarkdownH1 = { link = "@markup.heading.1" },
+		RenderMarkdownH2 = { link = "@markup.heading.2" },
+		RenderMarkdownH3 = { link = "@markup.heading.3" },
+		RenderMarkdownH4 = { link = "@markup.heading.4" },
+		RenderMarkdownH5 = { link = "@markup.heading.5" },
+		RenderMarkdownH6 = { link = "@markup.heading.6" },
+
+		RenderMarkdownH1Bg = { link = "@markup.heading.1" },
+		RenderMarkdownH2Bg = { link = "@markup.heading.2" },
+		RenderMarkdownH3Bg = { link = "@markup.heading.3" },
+		RenderMarkdownH4Bg = { link = "@markup.heading.4" },
+		RenderMarkdownH5Bg = { link = "@markup.heading.5" },
+		RenderMarkdownH6Bg = { link = "@markup.heading.6" },
+
+		RenderMarkdownCode = { link = "ColorColumn" },
+		RenderMarkdownCodeInline = { link = "ColorColumn" },
+		RenderMarkdownInlineHighlight = { link = "ColorColumn" },
+		RenderMarkdownBullet = { fg = colors.orange2 },
+		RenderMarkdownQuote = { link = "@markup.quote" },
+		RenderMarkdownDash = { link = "LineNr" },
+		RenderMarkdownSign = { link = "SignColumn" },
+		RenderMarkdownMath = { link = "@markup.math" },
+		RenderMarkdownHtmlComment = { link = "@comment" },
+		RenderMarkdownLink = { link = "@markup.link" },
+		RenderMarkdownWikiLink = { link = "@markup.link.label" },
+		RenderMarkdownChecked = { link = "@markup.list.checked" },
+		RenderMarkdownUnchecked = { link = "@markup.list.unchecked" },
+		RenderMarkdownTodo = { link = "@comment.todo" },
+		RenderMarkdownTableHead = { link = "@markup.heading" },
+		RenderMarkdownTableRow = { link = "Normal" },
+		RenderMarkdownTableFill = { link = "Conceal" },
+
+		RenderMarkdownSuccess = { link = "DiagnosticOk" },
+		RenderMarkdownInfo = { link = "DiagnosticInfo" },
+		RenderMarkdownHint = { link = "DiagnosticHint" },
+		RenderMarkdownWarn = { link = "DiagnosticWarn" },
+		RenderMarkdownError = { link = "DiagnosticError" },
 	}
 end
 
