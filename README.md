@@ -19,11 +19,19 @@
   </a>
 </p>
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/neovim_1.png?raw=true)
+## Eidolon-night
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/neovim_2.png?raw=true)
+![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-night_1.png?raw=true)
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/neovim_3.png?raw=true)
+![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-night_2.png?raw=true)
+
+![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-night_3.png?raw=true)
+
+## Eidolon-dusk
+
+![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-dusk_2.png?raw=true)
+
+![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-dusk_3.png?raw=true)
 
 ## Supported plugins
 
@@ -79,6 +87,9 @@ vim.cmd [[colorscheme eidolon-dusk]] -- muted color palette
 ```
 
 ### TODO
+- Integrate additional (light theme) color palette
+- Adjust (dusk) color palette bg colors
+- Update screenshots
 - Create doc file
 - Add support for:
     - [blink.cmp](https://github.com/Saghen/blink.cmp)
