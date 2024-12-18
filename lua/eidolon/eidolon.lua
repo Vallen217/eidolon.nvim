@@ -1,5 +1,5 @@
 local theme = {}
-local colors = require("eidolon.colors")
+local colors = require("eidolon.colors").night
 
 -- Editor
 theme.load_editor = function()
@@ -24,7 +24,7 @@ theme.load_editor = function()
 		TermCursorNC = { link = "Normal" }, -- Cursor in an unfocused terminal
 		ErrorMsg = { bg = colors.bg1, fg = colors.red1 }, -- Error messages on the command line
 		VertSplit = { bg = colors.bg1, fg = colors.bg1 }, -- Column separating vertically split windows
-		Folded = { bg = colors.bg3, fg = colors.grey1 }, -- Line used for closed folds
+		Folded = { bg = colors.bg5, fg = colors.grey1 }, -- Line used for closed folds
 		FoldColumn = { link = "Comment" }, -- 'foldcolumn'
 		SignColumn = { link = "Comment" }, -- Column where |signs| are displayed
 		IncSearch = { bg = colors.green1, fg = colors.bg1 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -54,7 +54,7 @@ theme.load_editor = function()
 		PmenuSbar = { link = "Normal" }, -- Popup menu: Scrollbar.
 		PmenuThumb = { link = "Normal" }, -- Popup menu: Thumb of the scrollbar.
 		Question = { bg = colors.bg1, fg = colors.lilac1 }, -- |hit-enter| prompt and yes/no questions
-		QuickFixLine = { bg = colors.bg3, fg = colors.fg }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+		QuickFixLine = { bg = colors.bg5, fg = colors.fg }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		Search = { link = "Normal" }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 		SpecialKey = { bg = colors.bg1, fg = colors.grey1 }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		SpellBad = { link = "Normal", undercurl = true, sp = colors.red2 }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -65,12 +65,12 @@ theme.load_editor = function()
 		StatusLineNC = { link = "Comment" }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		TabLine = { bg = colors.bg1, fg = colors.fg }, -- Tab pages line, not active tab page label
 		TabLineFill = { link = "Normal" }, -- Tab pages line, where there are no labels
-		TabLineSel = { bg = colors.bg3, fg = colors.fg }, -- Tab pages line, active tab page label
+		TabLineSel = { bg = colors.bg5, fg = colors.fg }, -- Tab pages line, active tab page label
 		Title = { bg = colors.bg1, fg = colors.blue2 }, -- Titles for output from ":set all", ":autocmd" etc.
 		Visual = { link = "Normal" }, -- Visual mode selection
 		VisualNOS = { link = "Normal" }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg = { bg = colors.bg1, fg = colors.ice1 }, -- Warning messages
-		Whitespace = { bg = colors.bg1, fg = colors.bg3 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+		Whitespace = { bg = colors.bg1, fg = colors.bg5 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		Winseparator = { bg = colors.bg1, fg = colors.grey3 }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
 		WildMenu = { link = "Normal" }, -- Current match in 'wildmenu' completion
 		WinBar = { link = "Comment" }, -- Window bar of current window
@@ -130,7 +130,7 @@ theme.load_lsp = function()
 		LspReferenceText = { link = "Normal" }, -- Used for highlighting "text" references
 		LspReferenceRead = { link = "Normal" }, -- Used for highlighting "read" references
 		LspReferenceWrite = { link = "Normal" }, -- Used for highlighting "write" references
-		LspInlayHint = { bg = "#222239", fg = colors.grey1 }, -- Used for highlighting inlay hints
+		LspInlayHint = { bg = colors.bg4, fg = colors.grey1 }, -- Used for highlighting inlay hints
 		LspCodeLens = { link = "Conceal" }, -- Used to color the virtual text of the codelens. See |nvim_buf_set_extmark()|.
 		LspCodeLensSeparator = { link = "Comment" }, -- Used to color the seperator between two or more code lens.
 		LspSignatureActiveParameter = { bg = colors.bg1, fg = colors.bg1 }, -- Used to highlight the active parameter in the signature help. See |vim.lsp.handlers.signature_help()|.
@@ -141,11 +141,11 @@ theme.load_lsp = function()
 		DiagnosticInfo = { fg = colors.blue1 }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		DiagnosticHint = { fg = colors.lilac1 }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		DiagnosticOk = { fg = colors.green1 }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticVirtualTextError = { bg = "#12070c", fg = colors.red2 }, -- Used for "Error" diagnostic virtual text.
-		DiagnosticVirtualTextWarn = { bg = "#041f24", fg = colors.ice2 }, -- Used for "Warn" diagnostic virtual text.
-		DiagnosticVirtualTextInfo = { bg = "#061423", fg = colors.blue2 }, -- Used for "Info" diagnostic virtual text.
-		DiagnosticVirtualTextHint = { bg = "#0d111c", fg = colors.lilac2 }, -- Used for "Hint" diagnostic virtual text.
-		DiagnosticVirtualTextOk = { bg = "#0a1512", fg = colors.green2 }, -- Used for "Ok" diagnostic virtual text.
+		DiagnosticVirtualTextError = { bg = colors.virt_err_bg, fg = colors.red2 }, -- Used for "Error" diagnostic virtual text.
+		DiagnosticVirtualTextWarn = { bg = colors.virt_warn_bg, fg = colors.ice2 }, -- Used for "Warn" diagnostic virtual text.
+		DiagnosticVirtualTextInfo = { bg = colors.virt_info_bg, fg = colors.blue2 }, -- Used for "Info" diagnostic virtual text.
+		DiagnosticVirtualTextHint = { bg = colors.virt_hint_bg, fg = colors.lilac2 }, -- Used for "Hint" diagnostic virtual text.
+		DiagnosticVirtualTextOk = { bg = colors.virt_ok_bg, fg = colors.green2 }, -- Used for "Ok" diagnostic virtual text.
 		DiagnosticUnderlineError = { link = "Normal", undercurl = true, sp = colors.red2 }, -- Used to underline "Error" diagnostics.
 		DiagnosticUnderlineWarn = { link = "Normal", undercurl = true, sp = colors.ice1 }, -- Used to underline "Warn" diagnostics.
 		DiagnosticUnderlineInfo = { link = "Normal", undercurl = true, sp = colors.blue1 }, -- Used to underline "Info" diagnostics.
@@ -167,7 +167,7 @@ end
 -- Treesitter (:h treesitter-highlight)
 theme.load_treesitter = function()
 	return {
-		["@variable"] = { fg = "#c0cffc" }, -- Various variable names
+		["@variable"] = { fg = colors.variable_fg }, -- Various variable names
 		["@variable.builtin"] = { fg = colors.red2 }, -- Built-in variable names
 		["@orange1.parameter"] = { fg = colors.ice2 }, -- Parameters of a function
 		["@variable.parameter.builtin"] = { fg = colors.lilac2 }, -- Special parameters (e.g. _, it)
@@ -186,7 +186,7 @@ theme.load_treesitter = function()
 		["@string.special.symbol"] = { fg = colors.blue2 }, -- Symbols or atoms
 		["@string.special.path"] = { fg = colors.blue2 }, -- File paths
 		["@string.special.url"] = { fg = colors.orange2 }, -- URLs/hyperlinks
-		["@character"] = { fg = colors.green1 }, -- Character litterals
+		["@character"] = { fg = colors.green1 }, -- Character literals
 		["@character.special"] = { fg = colors.blue2 }, -- Special characters
 		["@boolean"] = { fg = colors.orange1 }, -- Boolean literals
 		["@number"] = { fg = colors.yellow2 }, -- Number literals
@@ -225,7 +225,7 @@ theme.load_treesitter = function()
 		["@punctuation.special"] = { fg = colors.ice1 }, -- Special Symbols
 		["@comment"] = { fg = colors.grey2 }, -- Line & block comments
 		["@comment.documentation"] = { fg = colors.grey2 }, -- Comments documenting code
-		["@comment.error"] = { bg = "#a3336f", fg = colors.bg1 }, -- Error-type comments
+		["@comment.error"] = { bg = comment_err_bg, fg = colors.bg1 }, -- Error-type comments
 		["@comment.warning"] = { bg = colors.ice1, fg = colors.bg1 }, -- Warning-type comments
 		["@comment.todo"] = { bg = colors.blue1, fg = colors.bg1 }, -- Todo-type comments
 		["@comment.note"] = { bg = colors.green2, fg = colors.bg1 }, -- Note-type comments
@@ -234,12 +234,12 @@ theme.load_treesitter = function()
 		["@markup.strikethrough"] = { fg = colors.fg, strikethrough = true }, -- Struck-through text
 		["@markup.underline"] = { fg = colors.fg, underline = true }, -- Underlined text
 		["@markup.heading"] = { fg = colors.blue1 }, -- Heading & titles
-		["@markup.heading.1"] = { fg = "#95C7F9" }, -- Top-level heading
-		["@markup.heading.2"] = { fg = "#9ACAFA" }, -- Section heading
-		["@markup.heading.3"] = { fg = "#9FCCFA" }, -- Subsection heading
-		["@markup.heading.4"] = { fg = "#A4CFFA" }, -- And so on
-		["@markup.heading.5"] = { fg = "#A8D1FA" }, -- And so forth
-		["@markup.heading.6"] = { fg = "#ACD3FA" }, -- Six levels is enough
+		["@markup.heading.1"] = { fg = colors.markup_h1 }, -- Top-level heading
+		["@markup.heading.2"] = { fg = colors.markup_h2 }, -- Section heading
+		["@markup.heading.3"] = { fg = colors.markup_h3 }, -- Subsection heading
+		["@markup.heading.4"] = { fg = colors.markup_h4 }, -- And so on
+		["@markup.heading.5"] = { fg = colors.markup_h5 }, -- And so forth
+		["@markup.heading.6"] = { fg = colors.markup_h6 }, -- Six levels is enough
 		["@markup.quote"] = { fg = colors.fg }, -- Block quotes
 		["@markup.math"] = { fg = colors.blue2 }, -- Math environments
 		["@markup.link"] = { fg = colors.purple2 }, -- Text references footnotes, citations
@@ -292,7 +292,7 @@ theme.load_coc = function()
 		CocInfoLine = { link = "Comment" }, -- line highlight of sign which information
 		CocHintLine = { link = "Comment" }, -- line highlight of sign which contains hint
 
-		CocHighlightText = { bg = colors.bg2, fg = colors.grey1 }, -- default symbol highlight
+		CocHighlightText = { bg = colors.bg3, fg = colors.grey1 }, -- default symbol highlight
 		CocHighlightRead = { link = "CocHighlightText" }, -- for `Read` kind of document symbol
 		CocHighlightWrite = { link = "CocHighlightText" }, -- for `Write` kind of document symbol
 
@@ -315,7 +315,7 @@ theme.load_coc = function()
 		CocNotificationInfo = { link = "DiagnosticInfo" }, -- for highlight border of info notification
 
 		CocSearch = { link = "Comment" }, -- for matched characters
-		CocListLine = { bg = colors.bg2, fg = colors.grey1 }, -- for current cursor line
+		CocListLine = { bg = colors.bg3, fg = colors.grey1 }, -- for current cursor line
 		CocListSearch = { link = "Comment" }, -- for matched characters
 		CocListMode = { fg = colors.ice1 }, -- for mode text in the statusline
 		CocListPath = { link = "Comment" }, -- for cwd text in the statusline
@@ -532,7 +532,7 @@ theme.load_telescope = function()
 		TelescopePreviewTitle = { fg = colors.yellow2 },
 		TelescopePreviewBorder = { link = "FloatBorder" },
 		TelescopeSelectionCaret = { fg = colors.yellow2 },
-		TelescopeSelection = { fg = colors.fg, bg = colors.bg2 },
+		TelescopeSelection = { fg = colors.fg, bg = colors.bg3 },
 		TelescopeMatching = { link = "Search" },
 	}
 end
@@ -541,7 +541,7 @@ end
 theme.load_nvim_tree = function()
 	return {
 		NvimTreeNormal = { link = "Normal" },
-		NvimTreeVertSplit = { fg = colors.bg3, bg = colors.bg1 },
+		NvimTreeVertSplit = { fg = colors.bg5, bg = colors.bg1 },
 		NvimTreeRootFolder = { fg = colors.fg, bold = true },
 		NvimTreeGitDirty = { fg = colors.orange2 },
 		NvimTreeGitNew = { fg = colors.green2 },
@@ -554,7 +554,7 @@ end
 theme.load_aerial = function()
 	return {
 		AerialNormal = { fg = colors.grey1 },
-		AerialLine = { fg = colors.fg, bg = colors.bg2 },
+		AerialLine = { fg = colors.fg, bg = colors.bg3 },
 	}
 end
 
@@ -566,13 +566,13 @@ theme.load_neogit = function()
 
 		NeogitSectionHeader = { fg = colors.lilac2 },
 
-		NeogitCursorLine = { bg = colors.bg2 },
-		NeogitAddCursorLine = { bg = colors.bg2 },
-		NeogitDeleteCursorLine = { bg = colors.bg2 },
-		NeogitDiffHeaderCursor = { bg = colors.bg2 },
-		NeogitHunkHeaderCursor = { bg = colors.bg2 },
-		NeogitContextCursor = { bg = colors.bg2 },
-		NeogitHunkMergeHeaderCursor = { bg = colors.bg2 },
+		NeogitCursorLine = { bg = colors.bg3 },
+		NeogitAddCursorLine = { bg = colors.bg3 },
+		NeogitDeleteCursorLine = { bg = colors.bg3 },
+		NeogitDiffHeaderCursor = { bg = colors.bg3 },
+		NeogitHunkHeaderCursor = { bg = colors.bg3 },
+		NeogitContextCursor = { bg = colors.bg3 },
+		NeogitHunkMergeHeaderCursor = { bg = colors.bg3 },
 
 		NeogitHunkHeader = { bg = colors.bg1 },
 		NeogitHunkHeaderHighlight = { fg = colors.red2, underline = true, sp = colors.grey3 },

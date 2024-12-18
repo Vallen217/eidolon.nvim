@@ -1,4 +1,4 @@
-local colors = require("eidolon.colors")
+local colors = require("eidolon.colors").night
 local theme = {}
 
 theme.normal = {
