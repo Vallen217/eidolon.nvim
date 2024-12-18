@@ -1,9 +1,13 @@
-local theme = {}
-local colors = require("eidolon.colors").night
+local M = {}
+local config = require("eidolon.config")
 
--- Editor
-theme.load_editor = function()
-	return {
+local function set_highlights()
+	local colors = require("eidolon.colors")
+
+	local highlights = {}
+
+	-- Editor
+	M.default_highlights = {
 		Normal = { bg = colors.bg1, fg = colors.fg }, -- Normal text
 		Comment = { bg = colors.bg1, fg = colors.grey2 }, -- Any comment
 		ColorColumn = { link = "Normal" }, -- Columns set with 'colorcolumn'
@@ -75,12 +79,8 @@ theme.load_editor = function()
 		WildMenu = { link = "Normal" }, -- Current match in 'wildmenu' completion
 		WinBar = { link = "Comment" }, -- Window bar of current window
 		WinBarNC = { link = "Comment" }, -- Window bar of not-current windows
-	}
-end
 
--- General syntax (:h group-name)
-theme.load_syntax = function()
-	return {
+		-- General syntax (:h group-name)
 		Constant = { fg = colors.purple1 }, -- (*) Any constant
 		Boolean = { fg = colors.orange1 }, --   A boolean constant: TRUE, false
 		String = { fg = colors.green1 }, --   A string constant: "this is a string"
@@ -121,12 +121,8 @@ theme.load_syntax = function()
 		Ignore = { link = "Normal" }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
 		Error = { fg = colors.red2 }, -- Any erroneous construct
 		Todo = { bg = colors.blue1, fg = colors.bg1 }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-	}
-end
 
--- lsp (:h lsp-highlight)
-theme.load_lsp = function()
-	return {
+		-- lsp (:h lsp-highlight)
 		LspReferenceText = { link = "Normal" }, -- Used for highlighting "text" references
 		LspReferenceRead = { link = "Normal" }, -- Used for highlighting "read" references
 		LspReferenceWrite = { link = "Normal" }, -- Used for highlighting "write" references
@@ -161,12 +157,8 @@ theme.load_lsp = function()
 		DiagnosticSignInfo = { link = "DiagnosticInfo" }, -- Used for "Info" signs in sign column.
 		DiagnosticSignHint = { link = "DiagnosticHint" }, -- Used for "Hint" signs in sign column.
 		DiagnosticSignOk = { link = "DiagnosticOk" }, -- Used for "Ok" signs in sign column.
-	}
-end
 
--- Treesitter (:h treesitter-highlight)
-theme.load_treesitter = function()
-	return {
+		-- Treesitter (:h treesitter-highlight)
 		["@variable"] = { fg = colors.variable_fg }, -- Various variable names
 		["@variable.builtin"] = { fg = colors.red2 }, -- Built-in variable names
 		["@orange1.parameter"] = { fg = colors.ice2 }, -- Parameters of a function
@@ -257,12 +249,8 @@ theme.load_treesitter = function()
 		["@tag.builtin"] = { fg = colors.blue1 }, -- XML-style tag names (e.g. HTML5 tags)
 		["@tag.attribute"] = { fg = colors.lilac2 }, -- XML-style tag attributes
 		["@tag.delimiter"] = { fg = colors.ice2 }, -- XML-style tag delimiters
-	}
-end
 
--- coc (:h coc-highlights)
-theme.load_coc = function()
-	return {
+		-- coc (:h coc-highlights)
 		CocBold = { link = "Normal", bold = true }, -- For bold text
 		CocItalic = { link = "Normal", italic = true }, -- For italic text
 		CocUnderline = { link = "Normal", underline = true }, -- For underlined text
@@ -369,12 +357,8 @@ theme.load_coc = function()
 		CocSymbolEvent = { fg = colors.orange1 },
 		CocSymbolOperator = { link = "Normal" },
 		CocSymbolTypeParameter = { fg = colors.ice2 },
-	}
-end
 
--- nvim-notify
-theme.load_notify = function()
-	return {
+		-- nvim-notify
 		NotifyERRORBorder = { fg = colors.red2 },
 		NotifyWARNBorder = { fg = colors.ice2 },
 		NotifyINFOBorder = { fg = colors.blue2 },
@@ -390,12 +374,8 @@ theme.load_notify = function()
 		NotifyINFOIcon = { fg = colors.blue1 },
 		NotifyTRACEIcon = { fg = colors.purple1 },
 		NotifyDEBUGIcon = { link = "Normal" },
-	}
-end
 
--- nvim-cmp (:h cmp-highlight)
-theme.load_cmp = function()
-	return {
+		-- nvim-cmp (:h cmp-highlight)
 		CmpItemAbbr = { fg = colors.fg }, -- Highlight group for unmatched characters of each completion field.
 		CmpItemAbbrDeprecated = { fg = colors.fg }, -- Highlight group for unmatched characters of each deprecated completion field.
 		CmpItemAbbrMatch = { fg = colors.fg }, -- Highlight group for matched characters of each completion field. Matched characters
@@ -422,12 +402,8 @@ theme.load_cmp = function()
 		CmpItemKindConstant = { link = "@constant" },
 		CmpItemKindStruct = { link = "@structure" },
 		CmpItemKindTypeParameter = { link = "@variable.parameter" },
-	}
-end
 
--- gitsigns.nvim (:h gitsigns-highlight-groups)
-theme.load_gitsigns = function()
-	return {
+		-- gitsigns.nvim (:h gitsigns-highlight-groups)
 		GitSignsAdd = { link = "DiffAdd" }, -- Used for the text of 'add' signs.
 		GitSignsAddNr = { link = "DiffAdd" }, -- Used for number column (when `config.numhl == true`) of 'add' signs.
 		GitSignsAddLn = { link = "DiffAdd" }, -- Used for buffer line (when `config.linehl == true`) of 'add' signs.
@@ -441,32 +417,20 @@ theme.load_gitsigns = function()
 		GitSignsChangedeleteNr = { fg = colors.purple2 }, -- Used for number column (when `config.numhl == true`) of 'changedelete' signs.
 		GitSignsChangedeleteLn = { fg = colors.purple2 }, -- Used for buffer line (when `config.linehl == true`) of 'changedelete' signs.
 		GitSignsCurrentLineBlame = { link = "Comment", bold = true }, -- Used for current line blame.
-	}
-end
 
--- indent-blankline (:h indent-blankline)
-theme.load_ibl = function()
-	return {
+		-- indent-blankline (:h indent-blankline)
 		IndentBlanklineChar = { fg = colors.grey1 },
 		IndentBlanklineContextChar = { fg = colors.grey2 },
-	}
-end
 
--- which-key.nvim
-theme.load_which_key = function()
-	return {
+		-- which-key.nvim
 		WhichKey = { fg = colors.yellow2, bold = true },
 		WhichKeyDesc = { fg = colors.lilac2 },
 		WhichKeyGroup = { fg = colors.ice2 },
 		WhichKeySeperator = { link = "Conceal" },
 		WhichKeyBorder = { link = "FloatBorder" },
 		WhichKeyTitle = { link = "FloatTitle" },
-	}
-end
 
--- flash.nvim
-theme.load_flash = function()
-	return {
+		-- flash.nvim
 		FlashBackdrop = { link = "Comment" },
 		FlashMatch = { link = "Search" },
 		FlashCurrent = { link = "IncSearch" },
@@ -474,12 +438,8 @@ theme.load_flash = function()
 		FlashPrompt = { link = "MsgArea" },
 		FlashPromptIcon = { link = "Special" },
 		FlashCursor = { link = "Cursor" },
-	}
-end
 
--- trouble.nvim
-theme.load_trouble = function()
-	return {
+		-- trouble.nvim
 		TroubleCode = { link = "Special" },
 		TroubleCount = { link = "TabLineSel" },
 		TroubleDirectory = { link = "Directory" },
@@ -519,12 +479,8 @@ theme.load_trouble = function()
 		TroublePreview = { link = "Visual" },
 		TroubleSource = { link = "Comment" },
 		TroubleText = { link = "Normal" },
-	}
-end
 
--- telescope.nvim
-theme.load_telescope = function()
-	return {
+		-- telescope.nvim
 		TelescopePromptTitle = { link = "FloatTitle" },
 		TelescopePromptBorder = { link = "FloatBorder" },
 		TelescopeResultsTitle = { link = "FloatTitle" },
@@ -534,12 +490,8 @@ theme.load_telescope = function()
 		TelescopeSelectionCaret = { fg = colors.yellow2 },
 		TelescopeSelection = { fg = colors.fg, bg = colors.bg3 },
 		TelescopeMatching = { link = "Search" },
-	}
-end
 
--- nvim-tree
-theme.load_nvim_tree = function()
-	return {
+		-- nvim-tree
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeVertSplit = { fg = colors.bg5, bg = colors.bg1 },
 		NvimTreeRootFolder = { fg = colors.fg, bold = true },
@@ -547,20 +499,12 @@ theme.load_nvim_tree = function()
 		NvimTreeGitNew = { fg = colors.green2 },
 		NvimTreeImageFile = { fg = colors.pink1 },
 		NvimTreeFolderIcon = { fg = colors.lilac1 },
-	}
-end
 
--- aerial.nvim
-theme.load_aerial = function()
-	return {
+		-- aerial.nvim
 		AerialNormal = { fg = colors.grey1 },
 		AerialLine = { fg = colors.fg, bg = colors.bg3 },
-	}
-end
 
--- neogit
-theme.load_neogit = function()
-	return {
+		-- neogit
 		NeogitBranch = { fg = colors.blue2 },
 		NeogitRemote = { fg = colors.yellow2 },
 
@@ -595,11 +539,8 @@ theme.load_neogit = function()
 		NeogitDiffDeletions = { fg = colors.red1 },
 		NeogitDiffDeleteHighlight = { fg = colors.red2 },
 		NeogitChangeDeleted = { fg = colors.red1 },
-	}
-end
 
-theme.load_render_md = function()
-	return {
+		-- render-markdown
 		RenderMarkdownH1 = { link = "@markup.heading.1" },
 		RenderMarkdownH2 = { link = "@markup.heading.2" },
 		RenderMarkdownH3 = { link = "@markup.heading.3" },
@@ -638,6 +579,33 @@ theme.load_render_md = function()
 		RenderMarkdownWarn = { link = "DiagnosticWarn" },
 		RenderMarkdownError = { link = "DiagnosticError" },
 	}
+
+	for group, highlight in pairs(M.default_highlights) do
+		highlights[group] = highlight
+	end
+
+	for group, highlight in pairs(highlights) do
+		vim.api.nvim_set_hl(0, group, highlight)
+	end
 end
 
-return theme
+---@param variant Variant | nil
+function M.colorscheme(variant)
+	config.extend_options({ variant = variant })
+
+	vim.opt.termguicolors = true
+	if vim.g.colors_name then
+		vim.cmd("hi clear")
+		vim.cmd("syntax reset")
+	end
+	vim.g.colors_name = "eidolon"
+
+	set_highlights()
+end
+
+---@param options Options
+function M.setup(options)
+	config.extend_options(options or {})
+end
+
+return M

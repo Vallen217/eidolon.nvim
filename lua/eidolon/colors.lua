@@ -1,4 +1,6 @@
-local colors = {
+local options = require("eidolon.config").options
+local variants = {
+	---@class Night Color Palette
 	night = {
 		bg1 = "#12121f",
 		bg2 = "#171728",
@@ -58,13 +60,8 @@ local colors = {
 		markup_h6 = "#acd3fa",
 	},
 
-	pale_night = {
-		-- bg1 = "#151523",
-		-- bg2 = "#191929",
-		-- bg3 = "#202031",
-		-- bg4 = "#252537",
-		-- bg5 = "#2e2e42",
-
+	---@class Dusk Color Palette
+	dusk = {
 		bg1 = "#171726",
 		bg2 = "#1b1b2c",
 		bg3 = "#222234",
@@ -124,4 +121,16 @@ local colors = {
 	},
 }
 
-return colors
+if options.palette ~= nil and next(options.palette) then
+	for variant_name, override_palette in pairs(options.palette) do
+		if variants[variant_name] then
+			variants[variant_name] = vim.tbl_extend("force", variants[variant_name], override_palette or {})
+		end
+	end
+end
+
+if variants[options.variant] ~= nil then
+	return variants[options.variant]
+end
+
+return variants.dusk or variants[options.default or "night"]

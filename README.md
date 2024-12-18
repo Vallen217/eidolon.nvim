@@ -65,6 +65,8 @@ use("Vallen217/eidolon.nvim")
     priority = 1000,
     config = function()
         vim.cmd [[colorscheme eidolon]]
+        -- vim.cmd [[colorscheme eidolon-night]] -- default color palette 
+        -- vim.cmd [[colorscheme eidolon-dusk]] -- muted color palette
     end
 },
 ```
@@ -72,11 +74,11 @@ use("Vallen217/eidolon.nvim")
 ## Usage
 
 ```lua
-vim.cmd[[colorscheme eidolon]]
+vim.cmd [[colorscheme eidolon-night]] -- default color palette 
+vim.cmd [[colorscheme eidolon-dusk]] -- muted color palette
 ```
 
 ### TODO
-- Integrate additional color palettes as user options
 - Create doc file
 - Add support for:
     - [blink.cmp](https://github.com/Saghen/blink.cmp)
