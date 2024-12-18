@@ -75,8 +75,11 @@ use("Vallen217/eidolon.nvim")
 vim.cmd[[colorscheme eidolon]]
 ```
 
-<!--TODO:
-    Add doc file,
-    add support for [rednder-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-    add support for [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
--->
+### TODO
+- Integrate additional color palettes as user options
+- Create doc file
+- Add support for:
+    - [blink.cmp](https://github.com/Saghen/blink.cmp)
+    - [mini.nvim](https://github.com/echasnovski/mini.nvim)
+    - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+    - [noice.nvim](https://github.com/folke/noice.nvim)
