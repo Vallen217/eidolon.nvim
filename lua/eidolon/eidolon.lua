@@ -71,8 +71,8 @@ local function set_highlights()
 		TabLineFill = { link = "Normal" }, -- Tab pages line, where there are no labels
 		TabLineSel = { bg = colors.bg5, fg = colors.fg }, -- Tab pages line, active tab page label
 		Title = { bg = colors.bg1, fg = colors.blue2 }, -- Titles for output from ":set all", ":autocmd" etc.
-		Visual = { link = "Normal" }, -- Visual mode selection
-		VisualNOS = { link = "Normal" }, -- Visual mode selection when vim is "Not Owning the Selection".
+		Visual = { bg = colors.visual_sel_bg }, -- Visual mode selection
+		VisualNOS = { link = "Visual" }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg = { bg = colors.bg1, fg = colors.ice1 }, -- Warning messages
 		Whitespace = { bg = colors.bg1, fg = colors.bg5 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		Winseparator = { bg = colors.bg1, fg = colors.grey3 }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.

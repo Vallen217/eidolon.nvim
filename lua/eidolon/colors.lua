@@ -52,6 +52,8 @@ local variants = {
 
 		comment_err_bg = "#a3336f",
 
+		visual_sel_bg = "#27273f",
+
 		markup_h1 = "#95c7f9",
 		markup_h2 = "#9acafa",
 		markup_h3 = "#9fccfa",
@@ -111,6 +113,8 @@ local variants = {
 		variable_fg = "#cad7fc",
 
 		comment_err_bg = "#a73974",
+
+		visual_sel_bg = "#2c2c44",
 
 		markup_h1 = "#a0ccf8",
 		markup_h2 = "#a4cff9",
