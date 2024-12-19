@@ -73,8 +73,6 @@ use("Vallen217/eidolon.nvim")
     priority = 1000,
     config = function()
         vim.cmd [[colorscheme eidolon]]
-        -- vim.cmd [[colorscheme eidolon-night]] -- default color palette 
-        -- vim.cmd [[colorscheme eidolon-dusk]] -- muted color palette
     end
 },
 ```
@@ -82,18 +80,14 @@ use("Vallen217/eidolon.nvim")
 ## Usage
 
 ```lua
-vim.cmd [[colorscheme eidolon-night]] -- default color palette 
-vim.cmd [[colorscheme eidolon-dusk]] -- muted color palette
+vim.cmd [[colorscheme eidolon-midnight]]
+vim.cmd [[colorscheme eidolon-twighlight]]
+vim.cmd [[colorscheme eidolon-dusk]]
 ```
 
 ### TODO
-- Integrate additional (light theme) color palette
+- Integrate a light theme
 - Update screenshots
-- Create doc file
-- Adjust color groups for:
-    - markup headers
-    - dusk (color palette)
-        - bg
 - Add support for:
     - [blink.cmp](https://github.com/Saghen/blink.cmp)
     - [mini.nvim](https://github.com/echasnovski/mini.nvim)

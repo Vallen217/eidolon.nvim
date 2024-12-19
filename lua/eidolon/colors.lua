@@ -1,7 +1,7 @@
 local options = require("eidolon.config").options
 local variants = {
-	---@class Night Color Palette
-	night = {
+	---@class Midnight Color Palette
+	midnight = {
 		bg1 = "#12121f",
 		bg2 = "#171728",
 		bg3 = "#1d1d2f",
@@ -62,66 +62,128 @@ local variants = {
 		markup_h6 = "#acd3fa",
 	},
 
-	---@class Dusk Color Palette
-	dusk = {
-		bg1 = "#171726",
-		bg2 = "#1b1b2c",
-		bg3 = "#222234",
-		bg4 = "#27273a",
-		bg5 = "#2e2e42",
+	---@class Twighlight Color Palette
+	twighlight = {
+		bg1 = "#171727",
+		bg2 = "#1b1b2d",
+		bg3 = "#222235",
+		bg4 = "#26263b",
+		bg5 = "#2c2c44",
 
-		fg = "#e1e3ff",
+		fg = "#d1d4ff",
 
-		grey1 = "#6b6e8e",
-		grey2 = "#575875",
-		grey3 = "#4b4c68",
+		grey1 = "#686b92",
+		grey2 = "#545578",
+		grey3 = "#48496a",
 
-		green1 = "#7fd2ba",
-		green2 = "#88d7c2",
+		green1 = "#7cd5bb",
+		green2 = "#86dac4",
 
-		blue1 = "#8ec2f6",
-		blue2 = "#91c8f8",
+		blue1 = "#8cc2f8",
+		blue2 = "#8fc8fa",
 
-		ice1 = "#a2e8f6",
-		ice2 = "#acebf6",
+		ice1 = "#a0e9f8",
+		ice2 = "#abecf8",
 
-		purple1 = "#9d90e4",
-		purple2 = "#a89fe9",
+		purple1 = "#9b8ee6",
+		purple2 = "#a79eeb",
 
-		lilac1 = "#93acf6",
-		lilac2 = "#a0b6f8",
+		lilac1 = "#91abf7",
+		lilac2 = "#9fb5f9",
 
-		yellow1 = "#e5dba9",
-		yellow2 = "#ece0b1",
+		yellow1 = "#e5dca4",
+		yellow2 = "#eee2b4",
 
-		orange1 = "#e2bd98",
-		orange2 = "#e8c5a6",
+		orange1 = "#e4bd96",
+		orange2 = "#eac5a4",
 
-		red1 = "#bc4e7d",
-		red2 = "#be5584",
+		red1 = "#bf4a7d",
+		red2 = "#c25184",
 
-		pink1 = "#c3659d",
-		pink2 = "#d86fae",
+		pink1 = "#c6629e",
+		pink2 = "#da6cae",
 
 		-- syntax specific colors
-		virt_err_bg = "#190b11",
-		virt_warn_bg = "#06272d",
-		virt_info_bg = "#08192b",
-		virt_hint_bg = "#111622",
-		virt_ok_bg = "#0e1b17",
+		virt_err_bg = "#1a0a11",
+		virt_warn_bg = "#06282d",
+		virt_info_bg = "#07192c",
+		virt_hint_bg = "#101523",
+		virt_ok_bg = "#0d1c18",
 
-		variable_fg = "#cad7fc",
+		variable_fg = "#b6c7fc",
 
-		comment_err_bg = "#a73974",
+		comment_err_bg = "#ab3674",
 
-		visual_sel_bg = "#2c2c44",
+		visual_sel_bg = "#2b2b46",
 
-		markup_h1 = "#a0ccf8",
-		markup_h2 = "#a4cff9",
-		markup_h3 = "#a9d1f9",
-		markup_h4 = "#aed4f9",
-		markup_h5 = "#b4d6f9",
-		markup_h6 = "#b8d9fa",
+		markup_h1 = "#9fccf9",
+		markup_h2 = "#a2cffb",
+		markup_h3 = "#a8d1fa",
+		markup_h4 = "#add4fb",
+		markup_h5 = "#b2d6fb",
+		markup_h6 = "#b7d9fb",
+	},
+
+	---@class Dusk Color Palette
+	dusk = {
+		bg1 = "#191929",
+		bg2 = "#1d1d2f",
+		bg3 = "#242438",
+		bg4 = "#28283e",
+		bg5 = "#2c2c44",
+
+		fg = "#cdd1fe",
+
+		grey1 = "#6c6f93",
+		grey2 = "#595a78",
+		grey3 = "#4d4e6a",
+
+		green1 = "#83d2bb",
+		green2 = "#8ed7c4",
+
+		blue1 = "#93c4f6",
+		blue2 = "#97caf7",
+
+		ice1 = "#a7e9f6",
+		ice2 = "#b1ecf6",
+
+		purple1 = "#a196e4",
+		purple2 = "#ada5e9",
+
+		lilac1 = "#99b0f4",
+		lilac2 = "#a6baf7",
+
+		yellow1 = "#e4dcaa",
+		yellow2 = "#ede3bb",
+
+		orange1 = "#e2bf9d",
+		orange2 = "#e8c7ab",
+
+		red1 = "#bb5480",
+		red2 = "#be5b87",
+
+		pink1 = "#c26b9f",
+		pink2 = "#d775b0",
+
+		-- syntax specific colors
+		virt_err_bg = "#1c0c13",
+		virt_warn_bg = "#06282d",
+		virt_info_bg = "#091b2f",
+		virt_hint_bg = "#131825",
+		virt_ok_bg = "#101e1a",
+
+		variable_fg = "#bcccfa",
+
+		comment_err_bg = "#a93d76",
+
+		visual_sel_bg = "#303046",
+
+		markup_h1 = "#a6cff7",
+		markup_h2 = "#a9d1f9",
+		markup_h3 = "#afd4f8",
+		markup_h4 = "#b3d6f9",
+		markup_h5 = "#b8d9f9",
+		markup_h6 = "#bddbf9",
 	},
 }
 
@@ -137,4 +199,4 @@ if variants[options.variant] ~= nil then
 	return variants[options.variant]
 end
 
-return variants.dusk or variants[options.default or "night"]
+return vim.o.background == "light" and variants.dusk or variants[options.dark_variant or "midnight"]
