@@ -91,8 +91,8 @@ local variants = {
 		lilac1 = "#93acf6",
 		lilac2 = "#a0b6f8",
 
-		yellow1 = "#e6dead",
-		yellow2 = "#ede2b6",
+		yellow1 = "#e5dba9",
+		yellow2 = "#ece0b1",
 
 		orange1 = "#e2bd98",
 		orange2 = "#e8c5a6",

@@ -88,9 +88,12 @@ vim.cmd [[colorscheme eidolon-dusk]] -- muted color palette
 
 ### TODO
 - Integrate additional (light theme) color palette
-- Adjust (dusk) color palette bg colors
 - Update screenshots
 - Create doc file
+- Adjust color groups for:
+    - markup headers
+    - dusk (color palette)
+        - bg
 - Add support for:
     - [blink.cmp](https://github.com/Saghen/blink.cmp)
     - [mini.nvim](https://github.com/echasnovski/mini.nvim)
