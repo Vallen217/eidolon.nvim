@@ -21,39 +21,21 @@
 
 ## Eidolon-midnight
 
-<table width="100%">
-  <tr>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/midnight_1.png" />
-    </td>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/midnight_2.png" />
-    </td>
-</table>
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/midnight_1.png?raw=true)
+
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/midnight_2.png?raw=true)
 
 ## Eidolon-twighlight
 
-<table width="100%">
-  <tr>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_1.png" />
-    </td>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_2.png" />
-    </td>
-</table>
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_1.png?raw=true)
+
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_2.png?raw=true)
 
 ## Eidolon-dusk
 
-<table width="100%">
-  <tr>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dusk_1.png" />
-    </td>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dusk_2.png" />
-    </td>
-</table>
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dusk_1.png?raw=true)
+
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dusk_2.png?raw=true)
 
 ## Supported plugins
 
