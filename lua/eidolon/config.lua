@@ -1,4 +1,4 @@
----@alias Variant "midnight" | "twighlight" | "dusk"
+---@alias Variant "midnight" | "twighlight" | "dusk" | "dawn"
 local M = {}
 
 ---@class options
