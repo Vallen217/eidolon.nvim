@@ -19,19 +19,53 @@
   </a>
 </p>
 
-## Eidolon-night
+## Eidolon-midnight
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-night_1.png?raw=true)
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/midnight_1.png" />
+    </td>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/midnight_2.png" />
+    </td>
+</table>
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-night_2.png?raw=true)
+## Eidolon-twighlight
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-night_3.png?raw=true)
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_1.png" />
+    </td>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_2.png" />
+    </td>
+</table>
 
 ## Eidolon-dusk
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-dusk_2.png?raw=true)
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dusk_1.png" />
+    </td>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dusk_2.png" />
+    </td>
+</table>
 
-![Alt test](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/eidolon-dusk_3.png?raw=true)
+## Eidolon-dawn
+
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dawn_1.png" />
+    </td>
+    <td width="50%">
+      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dawn_2.png" />
+    </td>
+</table>
 
 ## Supported plugins
 
@@ -80,14 +114,20 @@ use("Vallen217/eidolon.nvim")
 ## Usage
 
 ```lua
+:colorscheme eidolon-midnight
+:colorscheme eidolon-twighlight
+:colorscheme eidolon-dusk
+:colorscheme eidolon-dawn
+```
+
+```lua
 vim.cmd [[colorscheme eidolon-midnight]]
 vim.cmd [[colorscheme eidolon-twighlight]]
 vim.cmd [[colorscheme eidolon-dusk]]
+vim.cmd [[colorscheme eidolon-dawn]]
 ```
 
 ### TODO
-- Integrate a light theme
-- Update screenshots
 - Add support for:
     - [blink.cmp](https://github.com/Saghen/blink.cmp)
     - [mini.nvim](https://github.com/echasnovski/mini.nvim)
