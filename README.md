@@ -55,18 +55,6 @@
     </td>
 </table>
 
-## Eidolon-dawn
-
-<table width="100%">
-  <tr>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dawn_1.png" />
-    </td>
-    <td width="50%">
-      <img src="https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/dawn_2.png" />
-    </td>
-</table>
-
 ## Supported plugins
 
 - [aerial.nvim](https://github.com/stevearc/aerial.nvim)
