@@ -25,7 +25,7 @@
 
 ![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/midnight_2.png?raw=true)
 
-## Eidolon-twighlight
+## Eidolon-twilight
 
 ![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twilight_1.png?raw=true)
 
