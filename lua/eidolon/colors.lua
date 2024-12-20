@@ -42,11 +42,11 @@ local variants = {
 		pink2 = "#d864aa",
 
 		-- syntax specific colors
-		virt_err_bg = "#DE87AD",
-		virt_warn_bg = "#86E7F9",
-		virt_info_bg = "#75B0F0",
-		virt_hint_bg = "#8AA4DB",
-		virt_ok_bg = "#8ED7C4",
+		virt_err_bg = "#12070C",
+		virt_warn_bg = "#041F24",
+		virt_info_bg = "#061423",
+		virt_hint_bg = "#0D111C",
+		virt_ok_bg = "#0A1512",
 
 		variable_fg = "#c0cffc",
 
