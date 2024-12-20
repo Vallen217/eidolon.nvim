@@ -27,9 +27,9 @@
 
 ## Eidolon-twighlight
 
-![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_1.png?raw=true)
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twilight_1.png?raw=true)
 
-![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twighlight_2.png?raw=true)
+![alt text](https://github.com/Vallen217/eidolon.nvim/blob/main/screenshots/twilight_2.png?raw=true)
 
 ## Eidolon-dusk
 
@@ -85,16 +85,14 @@ use("Vallen217/eidolon.nvim")
 
 ```lua
 :colorscheme eidolon-midnight
-:colorscheme eidolon-twighlight
+:colorscheme eidolon-twilight
 :colorscheme eidolon-dusk
-:colorscheme eidolon-dawn
 ```
 
 ```lua
 vim.cmd [[colorscheme eidolon-midnight]]
-vim.cmd [[colorscheme eidolon-twighlight]]
+vim.cmd [[colorscheme eidolon-twilight]]
 vim.cmd [[colorscheme eidolon-dusk]]
-vim.cmd [[colorscheme eidolon-dawn]]
 ```
 
 ### TODO

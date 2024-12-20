@@ -1,4 +1,4 @@
----@alias Variant "midnight" | "twighlight" | "dusk" | "dawn"
+---@alias Variant "midnight" | "twilight" | "dusk"
 local M = {}
 
 ---@class options
@@ -7,7 +7,7 @@ M.options = {
 	variant = "auto",
 
 	---@type Variant
-	dark_variant = "midnight",
+	default = "midnight",
 
 	---@type table<string, table<string, string>>
 	palette = {},

@@ -62,8 +62,8 @@ local variants = {
 		markup_h6 = "#acd3fa",
 	},
 
-	---@class Twighlight Color Palette
-	twighlight = {
+	---@class Twilight Color Palette
+	twilight = {
 		bg1 = "#171727",
 		bg2 = "#1b1b2d",
 		bg3 = "#222235",
@@ -185,68 +185,6 @@ local variants = {
 		markup_h5 = "#b8d9f9",
 		markup_h6 = "#bddbf9",
 	},
-
-	---@class Dawn Color Palette
-	dawn = {
-		bg1 = "#EBEBFF",
-		bg2 = "#E6E6FE",
-		bg3 = "#E1E1FE",
-		bg4 = "#DDDDFE",
-		bg5 = "#D8D8FD",
-
-		fg = "#7A7A9F",
-
-		grey1 = "#A8A8D6",
-		grey2 = "#A5A5D5",
-		grey3 = "#A2A2D2",
-
-		green1 = "#42D1A9",
-		green2 = "#4CD6B2",
-
-		blue1 = "#49A3FD",
-		blue2 = "#4DACFF",
-
-		ice1 = "#46DDFB",
-		ice2 = "#53E0F9",
-
-		purple1 = "#7E6CE4",
-		purple2 = "#897CE9",
-
-		lilac1 = "#688DFD",
-		lilac2 = "#7698FE",
-
-		yellow1 = "#E2D473",
-		yellow2 = "#EAD47B",
-
-		orange1 = "#E5AB71",
-		orange2 = "#EAB280",
-
-		red1 = "#A12B5E",
-		red2 = "#A92D65",
-
-		pink1 = "#C93B90",
-		pink2 = "#DE45A1",
-
-		-- syntax specific colors
-		virt_err_bg = "#F4D7E4",
-		virt_warn_bg = "#D5F1F6",
-		virt_info_bg = "#CFE5FC",
-		virt_hint_bg = "#D2DEF9",
-		virt_ok_bg = "#D7F4E9",
-
-		variable_fg = "#8AB1FF",
-
-		comment_err_bg = "#841F55",
-
-		visual_sel_bg = "#434A70",
-
-		markup_h1 = "#5DADFE",
-		markup_h2 = "#61B0FF",
-		markup_h3 = "#66B2FF",
-		markup_h4 = "#6BB5FF",
-		markup_h5 = "#71B8FE",
-		markup_h6 = "#76BAFE",
-	},
 }
 
 if options.palette ~= nil and next(options.palette) then
@@ -261,4 +199,4 @@ if variants[options.variant] ~= nil then
 	return variants[options.variant]
 end
 
-return vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "midnight"]
+return variants[options.default or "midnight"]

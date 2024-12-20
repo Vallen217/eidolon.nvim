@@ -1,2 +1,2 @@
 package.loaded["eidolon.colors"] = nil
-require("eidolon.eidolon").colorscheme("twighlight")
+require("eidolon.eidolon").colorscheme("twilight")
